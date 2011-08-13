@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 SUDO_DO="sudo -u root "
 

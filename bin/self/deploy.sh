@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ -z "$APACHE_USR" ]; then
 	for USR in 		daemon \

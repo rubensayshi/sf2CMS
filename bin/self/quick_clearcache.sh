@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ -z "$APACHE_USR" ]; then
 	for USR in 		httpd \
@@ -20,3 +20,4 @@ if [ -z "$ROOT" ]; then
 fi
 
 sudo rm -rf $ROOT/app/cache/*
+sudo rm -rf $ROOT/app/logs/*
