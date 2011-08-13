@@ -1,30 +1,11 @@
 #!/bin/bash
 
-SUDO_DO="sudo -u root "
-
 if [ -z "$ROOT" ]; then
-	ROOT=`php -r "echo dirname(dirname(dirname(realpath('$(pwd)/$0'))));"`
+	ROOT=`php -r "echo dirname(dirname(dirname(dirname(realpath('$(pwd)/$0')))));"`
 	export ROOT
 fi
 
-if [ -z "$APACHE_USR" ]; then
-	for USR in 		daemon \
-					httpd \
-					www-data \
-					apache
-	do
-		ID=`id -n $USR 2>&1`
-		if [ "$?" != "1" ]; then
-			APACHE_USR=$USR
-		fi
-	done
-	export APACHE_USR
-fi
-
-if [ -z "$DEV_USR" ]; then
-	DEV_USR=`id -g -n`
-	export DEV_USR
-fi
+source "${ROOT}/bin/self/inc/init.sh"
 
 function usage
 {

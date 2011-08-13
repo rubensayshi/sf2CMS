@@ -5,5 +5,7 @@ if [ -z "$ROOT" ]; then
 	export ROOT
 fi
 
-$ROOT/app/console doctrine:database:drop --force
-$ROOT/bin/self/quick_clearcache.sh
+source "${ROOT}/bin/self/inc/init.sh"
+
+${APACHE_DO}${ROOT}/app/console doctrine:database:drop --force
+${ROOT}/bin/self/quick_clearcache.sh

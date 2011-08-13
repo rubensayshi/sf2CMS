@@ -5,7 +5,8 @@ if [ -z "$ROOT" ]; then
 	export ROOT
 fi
 
+source "${ROOT}/bin/self/inc/init.sh"
 source "${ROOT}/bin/self/inc/setup_fileperms_init.sh"
 
-$ROOT/bin/vendors install --reinstall
-$ROOT/bin/self/setup_fileperms.sh -s "$SETUP_SYSTEM"
+${ROOT}/bin/vendors install --reinstall
+${ROOT}/bin/self/setup_fileperms.sh -s "$SETUP_SYSTEM"

@@ -5,9 +5,10 @@ if [ -z "$ROOT" ]; then
 	export ROOT
 fi
 
+source "${ROOT}/bin/self/inc/init.sh"
 source "${ROOT}/bin/self/inc/setup_fileperms_init.sh"
 
-${SUDO_DO}${ROOT}/bin/self/quick_clearcache.sh
+${ROOT}/bin/self/quick_clearcache.sh
 
 if [ "$SETUP_SYSTEM" == "setfalc" ]; then
 	${SUDO_DO}setfacl -R -m u:${APACHE_USR}:rwx -m u:${DEV_USR}:rwx ${ROOT}app/cache ${ROOT}app/logs

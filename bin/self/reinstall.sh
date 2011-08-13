@@ -5,5 +5,7 @@ if [ -z "$ROOT" ]; then
 	export ROOT
 fi
 
-$ROOT/bin/self/destroy.sh
-$ROOT/bin/self/install.sh
+source "${ROOT}/bin/self/inc/init.sh"
+
+${ROOT}/bin/self/destroy.sh
+${ROOT}/bin/self/install.sh
