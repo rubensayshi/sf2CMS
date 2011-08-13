@@ -57,3 +57,7 @@
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.0RC2
+
+[symfony-target-cnfs]
+    git=http://github.com/rubensayshi/symfony-target-cnfs.git
+    version=v0.1
